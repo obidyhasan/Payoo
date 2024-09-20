@@ -10,7 +10,6 @@ function getInnerTextById(id) {
 
 function setInnerTextById(id, text) {
   document.getElementById(id).innerText = text;
-  console.log("Update successfully");
 }
 
 function showContainerById(id) {
@@ -22,10 +21,18 @@ function showContainerById(id) {
   document.getElementById(id).classList.remove("hidden");
 }
 
+let lastId = null;
 function setItemClicked(id) {
-  // document.getElementById(id).classList.add("border-blue-400 bg-blue-50");
-  // document.getElementById(id).setAttribute('class',"border-blue-400 bg-blue-50")
-  // document.getElementById(id).className = "border-blue-400 bg-blue-50";
+  if (lastId !== null) {
+    document.getElementById(lastId).classList.remove("border-blue-400");
+    document.getElementById(lastId).classList.remove("bg-blue-50");
+  } else {
+    document.getElementById("addMoneyItem").classList.remove("border-blue-400");
+    document.getElementById("addMoneyItem").classList.remove("bg-blue-50");
+  }
+
   document.getElementById(id).classList.add("border-blue-400");
   document.getElementById(id).classList.add("bg-blue-50");
+
+  lastId = id;
 }

@@ -15,7 +15,7 @@ document
     const inputValue = getInputValueById("addMoneyInput");
     const inputPin = getInputValueById("addMoneyPin");
 
-    if (inputPin === 1234) {
+    if (inputPin === 1234 && isNaN(inputValue) === false) {
       let balance = getInnerTextById("myBalance");
       const newBalance = balance + inputValue;
       setInnerTextById("myBalance", newBalance);
