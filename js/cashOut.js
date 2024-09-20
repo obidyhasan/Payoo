@@ -22,6 +22,8 @@ document
 
       const newBalance = myBalance - cashOutMoney;
       setInnerTextById("myBalance", newBalance);
+
+      cashOutTransactions(cashOutMoney);
     } else {
       alert("something went wrong");
     }

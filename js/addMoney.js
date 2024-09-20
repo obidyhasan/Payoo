@@ -19,6 +19,8 @@ document
       let balance = getInnerTextById("myBalance");
       const newBalance = balance + inputValue;
       setInnerTextById("myBalance", newBalance);
+
+      addMoneyTransactions(inputValue);
     } else {
       alert("something went wrong");
     }

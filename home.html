@@ -97,6 +97,7 @@
           </div>
           <!-- Transactions -->
           <div
+            id="transactionsItem"
             class="flex items-center justify-center flex-col gap-1 py-4 rounded-lg border hover:border-blue-400 hover:bg-blue-50"
           >
             <img src="./assets/transactions.png" alt="" />
@@ -207,8 +208,11 @@
           <!-- Transactions Start -->
           <div id="transactionsContainer" class="hidden">
             <h2 class="font-semibold text-black text-lg">Transactions</h2>
-          </div>
-          <!-- Transactions End -->
+
+            <div id="listContainer">
+
+            </div>
+
         </div>
       </div>
     </main>
@@ -217,5 +221,6 @@
     <script src="./js/utilities.js"></script>
     <script src="./js/addMoney.js"></script>
     <script src="./js/cashOut.js"></script>
+    <script src="./js/transactions.js"></script>
   </body>
 </html>

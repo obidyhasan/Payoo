@@ -36,3 +36,32 @@ function setItemClicked(id) {
 
   lastId = id;
 }
+
+function addMoneyTransactions(money) {
+  const container = document.getElementById("listContainer");
+  const div = document.createElement("div");
+  div.className =
+    "flex justify-between items-center bg-green-50 p-5 font-semibold rounded-md mt-3";
+  div.innerHTML = `<h3>Add Money</h3>
+                  <div>
+                    <span>${money}</span>
+                    <span>tk</span>
+                  </div>`;
+
+  container.appendChild(div);
+  // console.log(div);
+}
+
+function cashOutTransactions(money) {
+  const container = document.getElementById("listContainer");
+  const div = document.createElement("div");
+  div.className =
+    "flex justify-between items-center bg-red-50 p-5 font-semibold rounded-md mt-3";
+  div.innerHTML = `<h3>Cash Out</h3>
+                  <div>
+                    <span>${money}</span>
+                    <span>tk</span>
+                  </div>`;
+
+  container.appendChild(div);
+}
